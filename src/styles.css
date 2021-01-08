@@ -52,19 +52,6 @@ img {
 .search-form {
   text-align: center;
 }
-/* .btn-more {
-   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  height: 25px;
-  padding-left: 10px;
-  border-radius: 5px;
-  font-size: 15px;
-}
-
-.btn-more.is-hidden {
-  display: none;
-} */
 
 .button {
   display: block;
