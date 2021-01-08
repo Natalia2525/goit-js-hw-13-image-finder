@@ -45,26 +45,14 @@ function fetchCards() {
   loadMoreBtn.disable();
   apiService.fetchCards().then(hits => {
     renderCards(hits);
-    scroll();
+    setTimeout(() => {
+      window.scrollTo({
+        top: document.documentElement.offsetHeight,
+        behavior: 'smooth',
+      });
+    }, 2000);
     loadMoreBtn.enable();
   });
-}
-function scroll() {
-  window.scrollTo({
-    top: document.documentElement.offsetHeight,
-    behavior: 'smooth',
-  });
-
-  // window.scrollTo({
-  //   top: document.body.scrollHeight,
-  //   behavior: 'smooth',
-  // });
-  // const { y } = refs.gallery.getBoundingClientRect();
-  // const screenHeight = document.documentElement.offsetHeight;
-  // window.scrollTo({
-  //   top: screenHeight - y,
-  //   behavior: 'smooth',
-  // });
 }
 
 function clearMarkup() {
